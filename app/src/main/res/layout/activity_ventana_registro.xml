@@ -8,36 +8,14 @@
     tools:context=".VentanaRegistro">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="500dp"
-        android:layout_height="967dp"
+        android:layout_width="416dp"
+        android:layout_height="692dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/lblDNI"
-            android:layout_width="345dp"
-            android:layout_height="52dp"
-            android:hint="DNI"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.322"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/lblDni"
-            android:layout_width="345dp"
-            android:layout_height="52dp"
-            android:hint="DNI"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.322"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.26" />
+        app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/lblNombre2"
@@ -50,6 +28,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.348" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/lblDNI"
+            android:layout_width="345dp"
+            android:layout_height="52dp"
+            android:hint="DNI"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.38"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.243" />
 
         <EditText
             android:id="@+id/lblEdad"
@@ -72,10 +62,10 @@
             android:text="Volver"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.56"
+            app:layout_constraintHorizontal_bias="0.554"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.584" />
+            app:layout_constraintVertical_bias="0.658" />
 
         <Button
             android:id="@+id/btnRegistrar"
@@ -84,10 +74,10 @@
             android:text="Registrar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.167"
+            app:layout_constraintHorizontal_bias="0.148"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.583" />
+            app:layout_constraintVertical_bias="0.658" />
 
         <ImageView
             android:id="@+id/imgRegistro"
@@ -122,17 +112,17 @@
             android:inputType="textPassword"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.233"
+            app:layout_constraintHorizontal_bias="0.182"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.514" />
+            app:layout_constraintVertical_bias="0.55" />
 
         <Switch
             android:id="@+id/switch1"
             android:layout_width="96dp"
             android:layout_height="48dp"
-            android:layout_marginStart="352dp"
-            android:layout_marginTop="472dp"
+            android:layout_marginStart="304dp"
+            android:layout_marginTop="424dp"
             android:text="Mostrar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

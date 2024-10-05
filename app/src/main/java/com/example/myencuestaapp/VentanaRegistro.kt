@@ -13,6 +13,7 @@ import kotlinx.coroutines.launch
 
 class VentanaRegistro : AppCompatActivity() {
     lateinit var binding: ActivityVentanaRegistroBinding
+    lateinit var database: AppDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding=ActivityVentanaRegistroBinding.inflate(layoutInflater)
@@ -38,6 +39,9 @@ class VentanaRegistro : AppCompatActivity() {
                             edad = binding.lblEdad.text.toString().toInt(),
                             password = binding.lblPass.text.toString(),
                             nombre = binding.lblNombre2.text.toString())
+
+                        database.usuarioDAO().insertarUsuario(Usuario)
+                        Toast.makeText(this@VentanaRegistro,"Persona añadida",Toast.LENGTH_SHORT).show()
                     }catch (E:Exception){
                        Toast.makeText(this@VentanaRegistro,"DNI duplicado. No se pudo registrar",Toast.LENGTH_SHORT).show()
                     }
