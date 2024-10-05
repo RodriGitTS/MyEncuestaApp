@@ -42,8 +42,9 @@ class VentanaRegistro : AppCompatActivity() {
                        Toast.makeText(this@VentanaRegistro,"DNI duplicado. No se pudo registrar",Toast.LENGTH_SHORT).show()
                     }
                 }
-
-             //aUsuario
+                binding.btnVolver.setOnClickListener {
+                    finish()
+                }
 
             }
 
