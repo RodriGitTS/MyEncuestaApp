@@ -24,6 +24,6 @@ interface UsuarioDAO {
     suspend fun eliminarPersonaPorDNI(dni: String): Int
 
     @Update
-    suspend fun actualizarPersona(persona: Persona):Int
+    suspend fun actualizarPersona(usuario: Usuario):Int
 
 }
