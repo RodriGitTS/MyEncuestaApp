@@ -1,6 +1,7 @@
 package com.example.myencuestaapp
 
 import Modelo.Usuario
+import Parametros.Parametros
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -8,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
+import androidx.room.Room
 import com.example.myencuestaapp.databinding.ActivityVentanaRegistroBinding
 import kotlinx.coroutines.launch
 
@@ -25,6 +27,14 @@ class VentanaRegistro : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        database= Room.databaseBuilder(
+            applicationContext,
+            AppDatabase::class.java, Parametros.nombre_BD
+        ).build()
+
+
+
+
 
         binding.btnRegistrar.setOnClickListener {
 
@@ -35,10 +45,13 @@ class VentanaRegistro : AppCompatActivity() {
 
                 lifecycleScope.launch {
                     try {
+
+
                         val Usuario=Usuario(dni = binding.lblDNI.text.toString(),
                             edad = binding.lblEdad.text.toString().toInt(),
                             password = binding.lblPass.text.toString(),
                             nombre = binding.lblNombre2.text.toString())
+
 
                         database.usuarioDAO().insertarUsuario(Usuario)
                         Toast.makeText(this@VentanaRegistro,"Persona añadida",Toast.LENGTH_SHORT).show()

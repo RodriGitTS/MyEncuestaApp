@@ -39,10 +39,11 @@ class MainActivity : AppCompatActivity() {
 
             var user:Usuario?=null
             var dni=binding.lblUsuario.text.toString()
-            var pass=binding.lblUsuario.text.toString()
+            var pass=binding.lblPassword.text.toString()
         lifecycleScope.launch {
             try {
                 user=database.usuarioDAO().obtenerUsuarioPorDNI(dni)
+
             }catch(E:Exception){}
 
             if (user!=null){
@@ -55,7 +56,11 @@ class MainActivity : AppCompatActivity() {
 
                     Toast.makeText(this@MainActivity,"Datos usuario correctos",Toast.LENGTH_SHORT).show()
 
-                }else Toast.makeText(this@MainActivity,"Datos incorrectos",Toast.LENGTH_SHORT)
+                }else {
+                    Toast.makeText(this@MainActivity,"Datos incorrectos",Toast.LENGTH_SHORT)
+                }
+            }else {
+                Toast.makeText(this@MainActivity,"No existen estos datos",Toast.LENGTH_SHORT).show()
             }
 
         }
