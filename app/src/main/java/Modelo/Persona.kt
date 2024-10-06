@@ -1,2 +1,6 @@
 package Modelo
-open class Persona(var dni:String, var nombre:String, var edad:Int)
+
+import androidx.room.Entity
+
+
+abstract class Persona(open var dni:String,open var nombre:String,open var edad:Int)
